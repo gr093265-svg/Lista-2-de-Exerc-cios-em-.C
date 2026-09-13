@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    printf("Digite A, B e C: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    // Simplesmente comparamos a soma com C
+    if (a + b < c) {
+        printf("A soma de A+B eh menor que C\n");
+    } else {
+        printf("A soma de A+B NAO eh menor que C\n");
+    }
+
+    return 0;
+}
