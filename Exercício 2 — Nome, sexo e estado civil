@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    char nome[50];
+    char sexo, estadoCivil[10];
+
+    printf("Nome: ");
+    scanf("%s", nome);
+
+    printf("Sexo (F/M): ");
+    scanf(" %c", &sexo);
+
+    printf("Estado civil (CASADA/SOLTEIRA/...): ");
+    scanf("%s", estadoCivil);
+
+    // Testamos as duas condições ao mesmo tempo com &&
+    if (sexo == 'F' && strcmp(estadoCivil, "CASADA") == 0) {
+        int tempo;
+        printf("Tempo de casamento (anos): ");
+        scanf("%d", &tempo);
+        printf("Tempo de casamento: %d anos\n", tempo);
+    } else {
+        printf("Nao se aplica pergunta extra.\n");
+    }
+
+    return 0;
+}
