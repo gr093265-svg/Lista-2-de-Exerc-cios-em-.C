@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    float limite, velocidade, percentualExcedido;
+
+    printf("Velocidade maxima da via: ");
+    scanf("%f", &limite);
+
+    printf("Velocidade registrada do veiculo: ");
+    scanf("%f", &velocidade);
+
+    printf("\nLimite da via: %.1f km/h\n", limite);
+    printf("Velocidade registrada: %.1f km/h\n", velocidade);
+
+    if (velocidade <= limite) {
+        printf("Nao houve infracao.\n");
+    } else {
+        // Calcula quanto % passou do limite
+        percentualExcedido = ((velocidade - limite) / limite) * 100;
+        printf("Percentual excedido: %.2f%%\n", percentualExcedido);
+
+        if (percentualExcedido <= 20) {
+            printf("Classificacao: infracao MEDIA\n");
+        } else if (percentualExcedido <= 50) {
+            printf("Classificacao: infracao GRAVE\n");
+        } else {
+            printf("Classificacao: infracao GRAVISSIMA\n");
+        }
+
+        // Verificacao extra, independente da classificacao acima
+        if (velocidade > 120) {
+            printf("ALERTA: velocidade extremamente elevada!\n");
+        }
+    }
+
+    return 0;
+}
