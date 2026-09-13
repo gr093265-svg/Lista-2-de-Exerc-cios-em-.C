@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdbool.h> // permite usar "bool", "true" e "false"
+
+int main() {
+    bool valor1, valor2;
+    int entrada1, entrada2;
+
+    printf("Digite 1 para verdadeiro ou 0 para falso (valor 1): ");
+    scanf("%d", &entrada1);
+    printf("Digite 1 para verdadeiro ou 0 para falso (valor 2): ");
+    scanf("%d", &entrada2);
+
+    valor1 = entrada1;
+    valor2 = entrada2;
+
+    if (valor1 == true && valor2 == true) {
+        printf("Ambos sao VERDADEIROS\n");
+    } else if (valor1 == false && valor2 == false) {
+        printf("Ambos sao FALSOS\n");
+    } else {
+        printf("Os valores sao diferentes\n");
+    }
+
+    return 0;
+}
