@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
+
+    // O resto da divisao por 2 (%) diz se e par ou impar
+    if (numero % 2 == 0) {
+        printf("O numero eh PAR\n");
+    } else {
+        printf("O numero eh IMPAR\n");
+    }
+
+    return 0;
+}
